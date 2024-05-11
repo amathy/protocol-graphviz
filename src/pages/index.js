@@ -24,7 +24,6 @@ import { parse as qs_parse } from 'qs';
 import { stringify as qs_stringify } from 'qs';
 import ExportAsUrlDialog from '../ExportAsUrlDialog.js';
 import ExportAsSvgDialog from '../ExportAsSvgDialog.js'
-import { graphvizVersion } from '../graphvizVersion.js';
 import UpdatedSnackbar from '../UpdatedSnackbar.js';
 import packageJSON from '../../package.json';
 
@@ -100,7 +99,7 @@ class Index extends React.Component {
       tabSize: +localStorage.getItem('tabSize') || 4,
       selectedGraphComponents: [],
       test: JSON.parse(localStorage.getItem('test')) || {},
-      graphvizVersion: graphvizVersion,
+      graphvizVersion: 3,
       newGraphvizVersion: graphvizVersion !== localStorage.getItem('graphvizVersion'),
       updatedSnackbarIsOpen: packageJSON.version !== localStorage.getItem('version'),
     };
